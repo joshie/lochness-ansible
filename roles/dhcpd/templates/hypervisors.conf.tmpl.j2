@@ -6,7 +6,7 @@ group hypervisors {
     if exists user-class and option user-class = "iPXE" {
         filename "http://ipxe.services.{{ $domain }}:8888/ipxe/${net0/ip}";
     } else {
-        next-server tftp.services.{{ $domain }};
+        next-server tftpd.services.{{ $domain }};
         filename "undionly.kpxe";
     }
 {{ range gets "/hypervisors/*/metadata" }}
