@@ -5,6 +5,6 @@ After=tftpd.service
 Wants=etcd.service
 
 [Service]
-ExecStart=/usr/sbin/queensland announce tftpd --name={{machine_id}} --port=69
+ExecStart=/usr/sbin/queensland announce tftp --name={{machine_id}} --port=69
 User=nobody
 Restart=always
